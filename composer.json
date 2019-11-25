@@ -1,0 +1,20 @@
+{
+    "name": "pilulka/expedition",
+    "description": "Pilulka expedition calculator",
+    "homepage": "https://www.pilulka.cz",
+    "type": "library",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Pilulka\\Expedition\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Pilulka\\Expedition\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.2"
+    }
+}
