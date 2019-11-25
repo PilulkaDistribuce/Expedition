@@ -4,8 +4,9 @@ declare(strict_types=1);
 namespace Pilulka\Expedition\Product;
 
 use DateTimeInterface;
-use Pilulka\Expedition\Helper\DateTimeFactory;
 use Pilulka\Expedition\WeekDay\DateCalculator;
+use Pilulka\Helper\DateTimeFactory;
+use DateTimeImmutable;
 
 class AvailabilityCalculator
 {
@@ -21,7 +22,7 @@ class AvailabilityCalculator
         $this->dateCalculator = $dateCalculator;
     }
 
-    public function calculate(int $availabilityPeriod, DateTimeInterface $since = null): DateTimeInterface
+    public function calculate(int $availabilityPeriod, DateTimeInterface $since = null): DateTimeImmutable
     {
         if ($since === null) {
             $since = $this->dateTimeFactory->createImmutable();
