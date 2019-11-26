@@ -18,7 +18,7 @@ class DateCalculator
     /** @var array  */
     private $unavailableDay;
 
-    public function __construct(array $unavailableDay, DateTimeFactory $dateTimeFactory)
+    public function __construct(UnavailableDay $unavailableDay, DateTimeFactory $dateTimeFactory)
     {
         $this->dateTimeFactory = $dateTimeFactory;
         $this->unavailableDay = $unavailableDay;
