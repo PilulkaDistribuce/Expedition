@@ -66,7 +66,7 @@ class DateCalculator
 
     private function isAvailable(DateTimeInterface $date): bool
     {
-        return in_array($date->format('j.n'), $this->unavailableDay, true)
-            || in_array($date->format('j.n.Y'), $this->unavailableDay, true);
+        return in_array($date->format('j.n'), $this->unavailableDay->getAll(), true)
+            || in_array($date->format('j.n.Y'), $this->unavailableDay->getAll(), true);
     }
 }
