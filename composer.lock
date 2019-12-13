@@ -4,48 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed2603074a1649ecb6df9eab2c1abb1c",
-    "packages": [
-        {
-            "name": "pilulka/factories",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:PilulkaDistribuce/Factories.git",
-                "reference": "a018a4d4a6402212acde0d86fe5d98bf5680c9f9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PilulkaDistribuce/Factories/zipball/a018a4d4a6402212acde0d86fe5d98bf5680c9f9",
-                "reference": "a018a4d4a6402212acde0d86fe5d98bf5680c9f9",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^7.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Pilulka\\Factories\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "Pilulka\\Factories\\Tests\\": "tests/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "description": "Pilulka factories",
-            "homepage": "https://www.pilulka.cz",
-            "support": {
-                "source": "https://github.com/PilulkaDistribuce/Factories/tree/master",
-                "issues": "https://github.com/PilulkaDistribuce/Factories/issues"
-            },
-            "time": "2019-12-13T12:52:41+00:00"
-        }
-    ],
+    "content-hash": "6d2e4fdf3f7600a7e0bd02bdfb3fdb24",
+    "packages": [],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
@@ -1517,9 +1477,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "pilulka/factories": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
