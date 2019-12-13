@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace Pilulka\Expedition\Product;
 
 use DateTimeInterface;
+use Pilulka\Expedition\Factory\DateTimeFactory;
 use Pilulka\Expedition\WeekDay\DateCalculator;
-use Pilulka\Factories\DateTimeFactory;
 use DateTimeImmutable;
 
 class AvailabilityCalculator

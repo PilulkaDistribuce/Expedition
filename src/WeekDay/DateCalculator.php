@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Pilulka\Expedition\WeekDay;
 
-use Pilulka\Factories\DateTimeFactory;
 use DateTimeInterface;
 use DateTimeImmutable;
+use Pilulka\Expedition\Factory\DateTimeFactory;
 
 class DateCalculator
 {
