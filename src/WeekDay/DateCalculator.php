@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace Pilulka\Expedition\WeekDay;
 
-use Pilulka\Helper\DateTimeFactory;
+use Pilulka\Factories\DateTimeFactory;
 use DateTimeInterface;
 use DateTimeImmutable;
 

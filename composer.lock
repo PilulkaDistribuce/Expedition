@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:PilulkaDistribuce/Factories.git",
-                "reference": "c8ba555f9c6593794875bcef83429315b34b0871"
+                "reference": "a018a4d4a6402212acde0d86fe5d98bf5680c9f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PilulkaDistribuce/Factories/zipball/c8ba555f9c6593794875bcef83429315b34b0871",
-                "reference": "c8ba555f9c6593794875bcef83429315b34b0871",
+                "url": "https://api.github.com/repos/PilulkaDistribuce/Factories/zipball/a018a4d4a6402212acde0d86fe5d98bf5680c9f9",
+                "reference": "a018a4d4a6402212acde0d86fe5d98bf5680c9f9",
                 "shasum": ""
             },
             "require-dev": {
@@ -26,12 +26,12 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "Pilulka\\Helper\\": "src/"
+                    "Pilulka\\Factories\\": "src/"
                 }
             },
             "autoload-dev": {
                 "psr-4": {
-                    "Pilulka\\Helper\\Tests\\": "tests/"
+                    "Pilulka\\Factories\\Tests\\": "tests/"
                 }
             },
             "license": [
@@ -43,7 +43,7 @@
                 "source": "https://github.com/PilulkaDistribuce/Factories/tree/master",
                 "issues": "https://github.com/PilulkaDistribuce/Factories/issues"
             },
-            "time": "2019-12-13T12:39:22+00:00"
+            "time": "2019-12-13T12:52:41+00:00"
         }
     ],
     "packages-dev": [

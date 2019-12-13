@@ -5,7 +5,7 @@ namespace Pilulka\Expedition\Product;
 
 use DateTimeInterface;
 use Pilulka\Expedition\WeekDay\DateCalculator;
-use Pilulka\Helper\DateTimeFactory;
+use Pilulka\Factories\DateTimeFactory;
 use DateTimeImmutable;
 
 class AvailabilityCalculator
