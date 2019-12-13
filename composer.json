@@ -14,16 +14,7 @@
             "Pilulka\\Expedition\\Tests\\": "tests/"
         }
     },
-    "require": {
-        "pilulka/helper": "dev-master"
-    },
     "require-dev": {
         "phpunit/phpunit": "^7.2"
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/PilulkaDistribuce/Helper.git"
-        }
-    ]
+    }
 }
