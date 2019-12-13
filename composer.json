@@ -23,7 +23,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/PilulkaDistribuce/Factories"
+            "url": "https://github.com/PilulkaDistribuce/Factories.git"
         }
     ]
 }
