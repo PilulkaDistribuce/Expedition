@@ -12,7 +12,7 @@ class AvailabilityCalculator
 {
     /** @var DateTimeFactory */
     private $dateTimeFactory;
-    
+
     /** @var DateCalculator  */
     private $dateCalculator;
 
@@ -28,8 +28,13 @@ class AvailabilityCalculator
             $since = $this->dateTimeFactory->createImmutable();
         }
 
-        $daysToAdd = intval(ceil($availabilityPeriod / 24));
+        $hoursToAdd = $availabilityPeriod % 24;
+        $daysToAdd = intval(round($availabilityPeriod / 24));
 
-        return $this->dateCalculator->addWorkDays($since, $daysToAdd);
+        $date = $this->dateCalculator->addWorkDays($since, $daysToAdd);
+        $date = $date->modify("+{$hoursToAdd} hours");
+
+        // convert to work day
+        return $this->dateCalculator->addWorkDays($date, 0);
     }
 }
