@@ -29,7 +29,7 @@ class AvailabilityCalculator
         }
 
         $hoursToAdd = $availabilityPeriod % 24;
-        $daysToAdd = intval(round($availabilityPeriod / 24));
+        $daysToAdd = intval(floor($availabilityPeriod / 24));
 
         $date = $this->dateCalculator->addWorkDays($since, $daysToAdd);
         $date = $date->modify("+{$hoursToAdd} hours");
