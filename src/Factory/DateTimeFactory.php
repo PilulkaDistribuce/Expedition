@@ -36,7 +36,12 @@ class DateTimeFactory
      */
     public function createFromFormat(string $format, string $time): DateTime
     {
-        return DateTime::createFromFormat($format, $time);
+        $dateTime = DateTime::createFromFormat($format, $time);
+        if ($dateTime === false) {
+            throw new \RuntimeException('Cannot create DateTime object');
+        }
+
+        return $dateTime;
     }
 
     /**
@@ -46,7 +51,11 @@ class DateTimeFactory
      */
     public function createImmutableFromFormat(string $format, string $time): DateTimeImmutable
     {
-        return DateTimeImmutable::createFromFormat($format, $time);
+        $dateTime = DateTimeImmutable::createFromFormat($format, $time);
+        if ($dateTime === false) {
+            throw new \RuntimeException('Cannot create DateTimeImmutable object');
+        }
 
+        return $dateTime;
     }
 }

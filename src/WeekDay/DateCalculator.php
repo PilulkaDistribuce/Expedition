@@ -5,23 +5,22 @@ namespace Pilulka\Expedition\WeekDay;
 
 use DateTimeInterface;
 use DateTimeImmutable;
+use HolidayProvider\HolidayProvider;
 use Pilulka\Expedition\Factory\DateTimeFactory;
 
 class DateCalculator
 {
-    private const SATURDAY = '6';
-    private const SUNDAY = '7';
 
     /** @var DateTimeFactory */
     private $dateTimeFactory;
     
-    /** @var array  */
-    private $unavailableDay;
+    /** @var HolidayProvider */
+    private $holidayProvider;
 
-    public function __construct(UnavailableDay $unavailableDay, DateTimeFactory $dateTimeFactory)
+    public function __construct(HolidayProvider $holidayProvider, DateTimeFactory $dateTimeFactory)
     {
         $this->dateTimeFactory = $dateTimeFactory;
-        $this->unavailableDay = $unavailableDay;
+        $this->holidayProvider = $holidayProvider;
     }
 
     public function addWorkDays(DateTimeInterface $date, int $countDays): DateTimeImmutable
@@ -36,12 +35,12 @@ class DateCalculator
 
     public function isWorkDay(DateTimeInterface $date): bool
     {
-        return !$this->isWeekend($date) && !$this->isAvailable($date);
+        return !$this->holidayProvider->isWeekendOrHoliday($date);
     }
 
     private function addOrSubtractWorkDays(DateTimeInterface $date, int $countDays, string $sign): DateTimeImmutable
     {
-        $date = DateTimeImmutable::createFromFormat(\DATE_ISO8601, $date->format(\DATE_ISO8601));
+        $date = $this->dateTimeFactory->createImmutableFromFormat(\DATE_ATOM, $date->format(\DATE_ATOM));
 
         while ($countDays > 0) {
             while (!$this->isWorkDay($date)) {
@@ -57,16 +56,5 @@ class DateCalculator
         }
 
         return $date;
-    }
-
-    private function isWeekend(DateTimeInterface $date): bool
-    {
-        return in_array($date->format('N'), [self::SATURDAY, self::SUNDAY], true);
-    }
-
-    private function isAvailable(DateTimeInterface $date): bool
-    {
-        return in_array($date->format('j.n'), $this->unavailableDay->getAll(), true)
-            || in_array($date->format('j.n.Y'), $this->unavailableDay->getAll(), true);
     }
 }

@@ -2,10 +2,12 @@ language: php
 sudo: false
 dist: trusty
 php:
-  - '7.1'
-  - '7.2'
+    - '7.1'
+    - '7.2'
+    - '8.0'
 install:
-  - travis_retry composer clear-cache
-  - travis_retry composer install
+    - travis_retry composer clear-cache
+    - travis_retry composer install
 script:
-  - vendor/bin/phpunit --configuration=phpunit.xml.dist
+    - vendor/bin/phpunit --configuration=phpunit.xml.dist
+    - vendor/bin/phpstan --memory-limit=-1 analyse src tests --level=8
