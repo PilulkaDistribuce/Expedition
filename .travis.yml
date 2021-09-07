@@ -4,7 +4,6 @@ dist: trusty
 php:
     - '7.1'
     - '7.2'
-    - '8.0'
 install:
     - travis_retry composer clear-cache
     - travis_retry composer install
