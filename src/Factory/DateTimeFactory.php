@@ -6,6 +6,7 @@ namespace Pilulka\Expedition\Factory;
 use DateTimeImmutable;
 use DateTime;
 use Exception;
+use RuntimeException;
 
 class DateTimeFactory
 {
@@ -38,7 +39,7 @@ class DateTimeFactory
     {
         $dateTime = DateTime::createFromFormat($format, $time);
         if ($dateTime === false) {
-            throw new \RuntimeException('Cannot create DateTime object');
+            throw new RuntimeException('Cannot create DateTime object');
         }
 
         return $dateTime;
@@ -53,7 +54,7 @@ class DateTimeFactory
     {
         $dateTime = DateTimeImmutable::createFromFormat($format, $time);
         if ($dateTime === false) {
-            throw new \RuntimeException('Cannot create DateTimeImmutable object');
+            throw new RuntimeException('Cannot create DateTimeImmutable object');
         }
 
         return $dateTime;
