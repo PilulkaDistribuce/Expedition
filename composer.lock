@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "pilulka-distribuce/holiday-provider",
-            "version": "0.1.5",
+            "version": "0.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PilulkaDistribuce/holiday-provider.git",
-                "reference": "b5a22e814c6f31da60454137c5668703ce2d8b99"
+                "reference": "15622a371257a050be4107f84813917e31a5cffe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PilulkaDistribuce/holiday-provider/zipball/b5a22e814c6f31da60454137c5668703ce2d8b99",
-                "reference": "b5a22e814c6f31da60454137c5668703ce2d8b99",
+                "url": "https://api.github.com/repos/PilulkaDistribuce/holiday-provider/zipball/15622a371257a050be4107f84813917e31a5cffe",
+                "reference": "15622a371257a050be4107f84813917e31a5cffe",
                 "shasum": ""
             },
             "require": {
@@ -41,9 +41,9 @@
             "description": "Provides holiday for various countries",
             "support": {
                 "issues": "https://github.com/PilulkaDistribuce/holiday-provider/issues",
-                "source": "https://github.com/PilulkaDistribuce/holiday-provider/tree/v0.1.4"
+                "source": "https://github.com/PilulkaDistribuce/holiday-provider/tree/0.1.6"
             },
-            "time": "2021-09-30T12:36:27+00:00"
+            "time": "2021-10-21T22:16:32+00:00"
         }
     ],
     "packages-dev": [
