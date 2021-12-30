@@ -16,7 +16,7 @@
     },
     "require": {
         "php": "7.1 - 8.0",
-        "pilulka-distribuce/holiday-provider": "^0.1.6"
+        "pilulka-distribuce/holiday-provider": "^0.1.7"
     },
     "require-dev": {
         "phpunit/phpunit": "*",
