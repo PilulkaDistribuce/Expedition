@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2995f68a99baf6f1dba9659a28a4f780",
+    "content-hash": "cc47e46b93a8095e0f52fb9907751032",
     "packages": [
         {
             "name": "pilulka-distribuce/holiday-provider",
-            "version": "0.1.6",
+            "version": "0.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PilulkaDistribuce/holiday-provider.git",
-                "reference": "15622a371257a050be4107f84813917e31a5cffe"
+                "reference": "d09739a4ef9c0efabe11e205d184f8153a62efda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PilulkaDistribuce/holiday-provider/zipball/15622a371257a050be4107f84813917e31a5cffe",
-                "reference": "15622a371257a050be4107f84813917e31a5cffe",
+                "url": "https://api.github.com/repos/PilulkaDistribuce/holiday-provider/zipball/d09739a4ef9c0efabe11e205d184f8153a62efda",
+                "reference": "d09739a4ef9c0efabe11e205d184f8153a62efda",
                 "shasum": ""
             },
             "require": {
@@ -41,9 +41,9 @@
             "description": "Provides holiday for various countries",
             "support": {
                 "issues": "https://github.com/PilulkaDistribuce/holiday-provider/issues",
-                "source": "https://github.com/PilulkaDistribuce/holiday-provider/tree/0.1.6"
+                "source": "https://github.com/PilulkaDistribuce/holiday-provider/tree/0.1.7"
             },
-            "time": "2021-10-21T22:16:32+00:00"
+            "time": "2021-12-30T14:24:48+00:00"
         }
     ],
     "packages-dev": [
