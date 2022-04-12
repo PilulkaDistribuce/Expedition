@@ -13,9 +13,12 @@ class DateCalculator
 
     /** @var DateTimeFactory */
     private $dateTimeFactory;
-    
+
     /** @var HolidayProvider */
     private $holidayProvider;
+
+    /** @var array<string, DateTimeImmutable> */
+    private $addWorkDaysCache = [];
 
     public function __construct(HolidayProvider $holidayProvider, DateTimeFactory $dateTimeFactory)
     {
@@ -25,7 +28,13 @@ class DateCalculator
 
     public function addWorkDays(DateTimeInterface $date, int $countDays): DateTimeImmutable
     {
-        return $this->addOrSubtractWorkDays($date, abs($countDays), '+');
+        $cacheKey = "{$date->getTimestamp()}__$countDays";
+        $cacheValue = $this->addWorkDaysCache[$cacheKey] ?? null;
+        if ($cacheValue !== null) {
+            return $cacheValue;
+        }
+
+        return $this->addWorkDaysCache[$cacheKey] = $this->addOrSubtractWorkDays($date, abs($countDays), '+');
     }
 
     public function subtractWorkDays(DateTimeInterface $date, int $countDays): DateTimeImmutable
