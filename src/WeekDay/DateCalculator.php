@@ -55,4 +55,14 @@ class DateCalculator
                 $date = $date->modify($sign . '1 day');
             }
 
-            $date = $date->modify($sign . '1 da
+            $date = $date->modify($sign . '1 day');
+            $countDays--;
+        }
+
+        while (!$this->isWorkDay($date)) {
+            $date = $date->modify($sign . '1 day');
+        }
+
+        return $date;
+    }
+}
