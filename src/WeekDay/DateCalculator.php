@@ -17,6 +17,7 @@ class DateCalculator
     /** @var HolidayProvider */
     private $holidayProvider;
 
+    /** @var array<string, DateTimeImmutable> */
     private $addWorkDaysCache = [];
 
     public function __construct(HolidayProvider $holidayProvider, DateTimeFactory $dateTimeFactory)
